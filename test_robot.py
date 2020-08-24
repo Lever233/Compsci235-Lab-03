@@ -54,9 +54,10 @@ def test_illegal_move(robot):
 
 def test_illegal_move_north(robot):
     robot.turn()
-
+    for ele in range(9):
+        robot.move()
     with pytest.raises(IllegalMoveException):
-        rebot.move()
+        robot.move()
 
 def test_move_north(robot):
     robot.move()
